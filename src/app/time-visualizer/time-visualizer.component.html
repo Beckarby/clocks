@@ -1,1 +1,12 @@
-<p>time-visualizer works!</p>
+<div class="home-container">
+  <h2>Welcome!</h2>
+  <div *ngIf="currentUser">
+    <p>You are logged in as: {{ currentUser.email }}</p>
+    <button (click)="onSignOut()">Sign Out</button>
+  </div>
+  <div *ngIf="!currentUser">
+    <p>You are not logged in.</p>
+    <button routerLink="/login">Log In</button>
+    <button routerLink="/signup">Sign Up</button>
+  </div>
+</div>
