@@ -9,12 +9,15 @@
                 id="email"
                 formControlName="email"
                 placeholder="Enter your email"
+                (input)="onInputChange()"
+                [class.error]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
             />
-            <div
+            <span
                 *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
                 class="error-message"
             >Please Enter a valid email
-            </div>
+            </span>
+             <span *ngIf="loginForm.get('email')?.errors?.['email']">Please enter a valid email</span>
         </div>
 
         <div class="form-group">
@@ -24,19 +27,34 @@
                 id="password"
                 formControlName="password"
                 placeholder="Enter your password"
+                (input)="onInputChange()"
+                [class.error]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
             />
             <div
                 *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
                 class="error-message"
-                >Password is required
+                >
+                <span *ngIf="loginForm.get('password')?.errors?.['required']">Password is required</span>
+                <span *ngIf="loginForm.get('password')?.errors?.['minlength']">
+                    Password must be at least 6 characters long 
+                </span>
             </div>
         </div>
 
-        <button type="submit" [disabled]="loginForm.invalid">Log In</button>
-
+        <button 
+            type="submit" 
+            [disabled]="loginForm.invalid || isLoading"
+            class="login-button"
+        >
+            <span *ngIf="!isLoading">Log In</span>
+            <span *ngIf="isLoading" class="loading-spinner">
+                <span class="spinner"></span>
+                Logging in...
+            </span>
+        </button>
         <div *ngIf="errorMessage" class="global-error-message">
             {{ errorMessage }}
         </div>
     </form>
-    <p>Don't have an account? <a routerLink="/signup">Sign Up</a></p>
+    <p class="signup-link">Don't have an account? <a routerLink="/signup" >Sign Up</a></p>
 </div>
