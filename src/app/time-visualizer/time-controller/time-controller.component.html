@@ -1,1 +1,11 @@
-<p>time-controller works!</p>
+<!-- time-controller.component.html -->
+<div class="time-controller">
+  <h3>Time Controller</h3>
+  <p>Global Time: {{ currentDisplayTime$ }}</p>
+
+  <div class="controls">
+    <button (click)="setUpdateInterval(1000)">1 Second Update</button>
+    <button (click)="setUpdateInterval(500)">0.5 Second Update</button>
+    <button (click)="setUpdateInterval(100)">0.1 Second Update</button>
+  </div>
+</div>

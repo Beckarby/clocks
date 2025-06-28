@@ -1,1 +1,40 @@
-<p>analog-clock works!</p>
+<div class="analog-clock-container">
+  <h2>{{ clockName }}</h2>
+  <svg class="analog-clock" viewBox="0 0 100 100">
+    <!-- Clock Face -->
+    <circle cx="50" cy="50" r="48" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+
+    <line x1="50" y1="2" x2="50" y2="8" stroke="#333" stroke-width="2" transform="rotate(0 50 50)"/>
+    <line x1="92" y1="50" x2="98" y2="50" stroke="#333" stroke-width="2" transform="rotate(90 50 50)"/>
+    <line x1="50" y1="92" x2="50" y2="98" stroke="#333" stroke-width="2" transform="rotate(180 50 50)"/>
+    <line x1="2" y1="50" x2="8" y2="50" stroke="#333" stroke-width="2" transform="rotate(270 50 50)"/>
+
+    <!-- Hour Hand -->
+    <line
+      x1="50" y1="50"
+      x2="50" y2="30"
+      stroke="#333" stroke-width="6" stroke-linecap="round"
+      [attr.transform]="'rotate(' + hourHandDeg + ' 50 50)'"
+    />
+
+    <!-- Minute Hand -->
+    <line
+      x1="50" y1="50"
+      x2="50" y2="15"
+      stroke="#333" stroke-width="4" stroke-linecap="round"
+      [attr.transform]="'rotate(' + minuteHandDeg + ' 50 50)'"
+    />
+
+    <!-- Second Hand -->
+    <line
+      x1="50" y1="50"
+      x2="50" y2="10"
+      stroke="red" stroke-width="2" stroke-linecap="round"
+      [attr.transform]="'rotate(' + secondHandDeg + ' 50 50)'"
+    />
+
+    <!-- Center Cap -->
+    <circle cx="50" cy="50" r="4" fill="#333"/>
+  </svg>
+</div>

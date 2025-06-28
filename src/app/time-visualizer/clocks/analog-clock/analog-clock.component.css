@@ -1,0 +1,30 @@
+/* src/app/analog-clock/analog-clock.component.css */
+.analog-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Space it out from other components */
+}
+
+.analog-clock {
+  width: 250px; /* Set the desired size of your clock */
+  height: 250px;
+  /* Add border or shadow for visual appeal */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Smooth transitions for hands */
+/* Note: Using transitions on SVG transforms can sometimes be a bit tricky
+   for continuous rotation if you're not careful with angle wrapping.
+   For smooth 1-second updates, it usually looks good.
+*/
+.analog-clock line {
+  transition: transform 0.1s linear; /* Slight transition for smoother movement */
+}

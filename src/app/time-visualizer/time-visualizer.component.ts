@@ -4,10 +4,13 @@ import { AuthService } from '../auth/auth.service';
 import type { User } from 'firebase/auth';
 import { Router } from '@angular/router';
 import { NavbarComponent } from "../shared/navbar/navbar.component";
+import { DigitalClockComponent } from "./clocks/digital-clock/digital-clock.component";
+import { AnalogClockComponent } from "./clocks/analog-clock/analog-clock.component";
+import { TimeControllerComponent } from "./time-controller/time-controller.component";
 
 @Component({
   selector: 'app-time-visualizer',
-  imports: [CommonModule, NavbarComponent],
+  imports: [CommonModule, NavbarComponent, DigitalClockComponent, TimeControllerComponent, AnalogClockComponent],
   templateUrl: './time-visualizer.component.html',
   styleUrls: ['./time-visualizer.component.css']
 })
