@@ -7,10 +7,12 @@ import {
   authState,
 } from '@angular/fire/auth';
 import type { User } from 'firebase/auth';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class AuthService {
 	user$: Observable<User | null>;
 
