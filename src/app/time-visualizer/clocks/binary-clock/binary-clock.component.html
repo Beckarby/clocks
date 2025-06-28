@@ -1,0 +1,75 @@
+<div class="binary-clock-container">
+  <h2>{{ clockName }}</h2>
+
+  <div class="binary-clock">
+    <!-- Hours Tens Column -->
+    <div class="column more-extra-padding">
+      <div class="column-label">{{ hoursTens.label }}</div>
+      <div class="led-container">
+        <ng-container *ngFor="let bitOn of hoursTens.bits; let i = index">
+          <div class="led" [class.on]="bitOn"></div>
+        </ng-container>
+      </div>
+      <div class="decimal-value">{{ hoursTens.value }}</div>
+    </div>
+
+    <!-- Hours Units Column -->
+    <div class="column">
+      <div class="column-label">{{ hoursUnits.label }}</div>
+      <div class="led-container">
+        <ng-container *ngFor="let bitOn of hoursUnits.bits; let i = index">
+          <div class="led" [class.on]="bitOn"></div>
+        </ng-container>
+      </div>
+      <div class="decimal-value">{{ hoursUnits.value }}</div>
+    </div>
+
+    <div class="separator">:</div>
+
+    <!-- Minutes Tens Column -->
+    <div class="column extra-padding">
+      <div class="column-label">{{ minutesTens.label }}</div>
+      <div class="led-container">
+        <ng-container *ngFor="let bitOn of minutesTens.bits; let i = index">
+          <div class="led" [class.on]="bitOn"></div>
+        </ng-container>
+      </div>
+      <div class="decimal-value">{{ minutesTens.value }}</div>
+    </div>
+
+    <!-- Minutes Units Column -->
+    <div class="column">
+      <div class="column-label">{{ minutesUnits.label }}</div>
+      <div class="led-container">
+        <ng-container *ngFor="let bitOn of minutesUnits.bits; let i = index">
+          <div class="led" [class.on]="bitOn"></div>
+        </ng-container>
+      </div>
+      <div class="decimal-value">{{ minutesUnits.value }}</div>
+    </div>
+
+    <div class="separator">:</div>
+
+    <!-- Seconds Tens Column -->
+    <div class="column extra-padding">
+      <div class="column-label">{{ secondsTens.label }}</div>
+      <div class="led-container">
+        <ng-container *ngFor="let bitOn of secondsTens.bits; let i = index">
+          <div class="led" [class.on]="bitOn"></div>
+        </ng-container>
+      </div>
+      <div class="decimal-value">{{ secondsTens.value }}</div>
+    </div>
+
+    <!-- Seconds Units Column -->
+    <div class="column">
+      <div class="column-label">{{ secondsUnits.label }}</div>
+      <div class="led-container">
+        <ng-container *ngFor="let bitOn of secondsUnits.bits; let i = index">
+          <div class="led" [class.on]="bitOn"></div>
+        </ng-container>
+      </div>
+      <div class="decimal-value">{{ secondsUnits.value }}</div>
+    </div>
+  </div>
+</div>

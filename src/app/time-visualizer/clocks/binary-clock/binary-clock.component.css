@@ -1,0 +1,75 @@
+.binary-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #333; 
+  color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.binary-clock {
+  display: flex;
+  gap: 15px; 
+  align-items: flex-end; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column-label {
+  font-size: 0.8em;
+  margin-bottom: 5px;
+  color: #aaa;
+}
+
+.led-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; 
+  padding-bottom: 5px; 
+}
+
+.column.extra-padding .led-container {
+  padding-top: 25px;
+}
+
+.more-extra-padding .led-container {
+  padding-top: 52px; 
+}
+.led {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%; 
+  background-color: #555;
+  border: 1px solid #777;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.led.on {
+  background-color: limegreen; 
+  box-shadow: 0 0 8px limegreen, 0 0 15px rgba(0, 255, 0, 0.5); /* Glow effect */
+}
+
+.decimal-value {
+  margin-top: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.separator {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: -5px; 
+  align-self: flex-end; 
+  color: #ccc;
+}

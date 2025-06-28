@@ -1,0 +1,16 @@
+<div class="candle-clock-container">
+  <h2>{{ clockName }}</h2>
+
+  <div class="candle-wrapper">
+    <div class="candle-base"></div>
+
+    <div class="candle-wax" [style.height.%]="candleHeightPercentage">
+      <div class="candle-wick"></div>      
+      <div class="candle-flame" *ngIf="candleHeightPercentage > 5"></div>
+    </div>
+
+    <div class="candle-height-mark"></div>
+  </div>
+
+  <p>Remaining: {{ candleHeightPercentage.toFixed(0) }}%</p>
+</div>

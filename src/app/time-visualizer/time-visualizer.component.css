@@ -1,6 +1,6 @@
 .home-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     height: 80vh;

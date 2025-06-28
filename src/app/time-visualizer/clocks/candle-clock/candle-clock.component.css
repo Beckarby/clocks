@@ -1,0 +1,91 @@
+.candle-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #a69b9b;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  min-width: 180px; 
+}
+
+.candle-wrapper {
+  position: relative;
+  width: 60px; 
+  height: 200px; 
+  display: flex;
+  flex-direction: column-reverse; 
+  margin-top: 30px; 
+  border: 1px solid #eee; 
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.candle-height-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.candle-base {
+  background-color: #555;
+  height: 20px; 
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+  z-index: 2; 
+}
+
+.candle-wax {
+  background-color: #eaeab6; 
+  width: 100%;
+  position: absolute; 
+  bottom: 20px; 
+  left: 0;
+  border-radius: 5px 5px 0 0;
+  transition: height 0.5s linear; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start; 
+}
+
+.candle-wick {
+  width: 4px;
+  height: 10px; 
+  background-color: #333;
+  position: absolute; 
+  top: -10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1.5px;
+  z-index: 3;
+}
+
+.candle-flame {
+  width: 20px;
+  height: 25px;
+  background-color: orange;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
+  box-shadow: 0 0 10px yellow, 0 0 20px orange, 0 0 30px rgba(255, 165, 0, 0.5);
+  position: absolute;
+  top: -35px; 
+  left: 50%;
+  transform: translateX(-50%);
+  animation: flicker 1.5s infinite alternate; 
+  z-index: 4;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) rotate(0deg) scale(1); opacity: 1; }
+  25% { transform: translateX(-50%) rotate(-1deg) scale(0.98); opacity: 0.95; }
+  50% { transform: translateX(-50%) rotate(1deg) scale(1.02); opacity: 1; }
+  75% { transform: translateX(-50%) rotate(-0.5deg) scale(0.99); opacity: 0.98; }
+  100% { transform: translateX(-50%) rotate(0.5deg) scale(1); opacity: 1; }
+}

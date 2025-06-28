@@ -21,8 +21,7 @@ export class AnalogClockComponent implements OnInit, OnDestroy, Clock {
   constructor(private timeService: TimeService) { }
 
   ngOnInit(): void {
-    // Subscribe to the time service's observable
-    this.timeSubscription = this.timeService.currentTime$.subscribe(date => {
+      this.timeSubscription = this.timeService.currentTime$.subscribe(date => {
       this.updateClockHands(date);
     });
   }
@@ -34,12 +33,12 @@ export class AnalogClockComponent implements OnInit, OnDestroy, Clock {
 
     this.secondHandDeg = (seconds * 6);
     this.minuteHandDeg = (minutes * 6) + (seconds * 0.1); 
-    this.hourHandDeg = (hours % 12) * 30 + (minutes * 0.5) + (seconds * (0.5 / 60)); // 30 degrees per hour, 0.5 degrees per minute, and a fraction for seconds
+    this.hourHandDeg = (hours % 12) * 30 + (minutes * 0.5) + (seconds * (0.5 / 60)); 
   }
 
   ngOnDestroy(): void {
     if (this.timeSubscription) {
-      this.timeSubscription.unsubscribe(); // Clean up the subscription
+      this.timeSubscription.unsubscribe(); 
     }
   }
 
