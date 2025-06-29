@@ -1,8 +1,13 @@
 @font-face {
     font-family: '7digital';
-    src: url('/public/digital7/digital7.ttf') format('truetype');
+    src: url('/digital7/digital7.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'dsdigital';
+    src: url('/');
 }
 
 .header {
@@ -25,6 +30,7 @@
   justify-content: space-between;
   align-items: center;
   height: 64px;
+  font-family: '7digital', sans-serif;
 }
 
 .nav-brand {
@@ -122,7 +128,7 @@
 .user-name {
   color: #374151;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 1.7rem;
   padding-right: 15px;
 }
 
@@ -136,6 +142,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 0.875rem;
+  font-family: '7digital', sans-serif;
 }
 
 .logout-btn:hover {

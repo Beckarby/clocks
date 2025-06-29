@@ -1,8 +1,0 @@
-@font-face {
-    font-family: '7digital';
-    src: url(/public/digital7/digital7.ttf) format('truetype');
-}
-
-body {
-    font-family: '7digital', sans-serif;
-}
