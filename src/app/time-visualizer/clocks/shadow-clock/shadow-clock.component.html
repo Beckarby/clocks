@@ -1,0 +1,65 @@
+<div class="shadow-clock-container">
+  <h2>{{ clockName }}</h2>
+  <p class="current-time">{{ currentTime }}</p>
+
+  <div class="shadow-clock-dial">
+    <svg class="clock-face" viewBox="0 0 100 100">
+      <!-- Sundial base -->
+      <circle cx="50" cy="50" r="45" fill="#F5DEB3" stroke="#8B4513" stroke-width="2"/>
+      
+      <!-- Inner circle -->
+      <circle cx="50" cy="50" r="35" fill="none" stroke="#8B4513" stroke-width="1" opacity="0.5"/>
+
+      <!-- Hour markers and numbers -->
+      <g *ngFor="let i of hourMarkers">
+        <!-- Hour marker line -->
+        <line
+          x1="50" y1="15"
+          x2="50" y2="20"
+          stroke="#8B4513"
+          stroke-width="2"
+          [attr.transform]="getHourMarkerTransform(i)"
+        />
+        
+        <!-- Hour number -->
+        <text
+          [attr.x]="getHourNumberPosition(i).x"
+          [attr.y]="getHourNumberPosition(i).y"
+          text-anchor="middle"
+          dominant-baseline="central"
+          font-size="4"
+          fill="#8B4513"
+          font-weight="bold"
+        >
+          
+        </text>
+      </g>
+
+      <!-- Gnomon (the part that casts the shadow) -->
+      <line x1="50" y1="50" x2="50" y2="25" stroke="#654321" stroke-width="3" stroke-linecap="round"/>
+      
+      <!-- Gnomon tip -->
+      <circle cx="50" cy="25" r="1.5" fill="#654321"/>
+
+      <!-- Shadow -->
+      <line
+        x1="50" y1="50"
+        [attr.x2]="getShadowEndPosition().x"
+        [attr.y2]="getShadowEndPosition().y"
+        stroke="rgba(0, 0, 0, 0.6)"
+        stroke-width="4"
+        stroke-linecap="round"
+        class="shadow-line"
+      />
+
+      <!-- Center dot -->
+      <circle cx="50" cy="50" r="2" fill="#654321"/>
+
+      <!-- Cardinal directions -->
+      <text x="50" y="8" text-anchor="middle" font-size="3" fill="#8B4513" font-weight="bold">N</text>
+      <text x="92" y="52" text-anchor="middle" font-size="3" fill="#8B4513" font-weight="bold">E</text>
+      <text x="50" y="95" text-anchor="middle" font-size="3" fill="#8B4513" font-weight="bold">S</text>
+      <text x="8" y="52" text-anchor="middle" font-size="3" fill="#8B4513" font-weight="bold">W</text>
+    </svg>
+  </div>
+</div>

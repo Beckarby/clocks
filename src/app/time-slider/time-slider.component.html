@@ -1,0 +1,53 @@
+<div class="time-slider-container">
+
+  <div class="sliders-grid">
+    <div class="slider-group">
+      <label for="hour-slider">Hours</label>
+      <div class="slider-value">{{ hour.toString().padStart(2, '0') }}</div>
+      <input
+        type="range"
+        id="hour-slider"
+        min="0"
+        max="23"
+        [(ngModel)]="hour"
+        (change)="onSliderChange()"
+      />
+    </div>
+
+    <div class="slider-group">
+      <label for="minute-slider">Minutes</label>
+      <div class="slider-value">{{ minute.toString().padStart(2, '0') }}</div>
+      <input
+        type="range"
+        id="minute-slider"
+        min="0"
+        max="59"
+        [(ngModel)]="minute"
+        (change)="onSliderChange()"
+      />
+    </div>
+
+    <div class="slider-group">
+      <label for="second-slider">Seconds</label>
+      <div class="slider-value">{{ second.toString().padStart(2, '0') }}</div>
+      <input
+        type="range"
+        id="second-slider"
+        min="0"
+        max="59"
+        [(ngModel)]="second"
+        (change)="onSliderChange()"
+      />
+    </div>
+  </div>
+
+  <div class="control-buttons">
+    <button 
+      class="reset-button" 
+      (click)="resetToCurrentTime()"
+      [disabled]="!isCustomTime"
+    >
+      Reset to Real Time
+    </button>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+.shadow-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  max-width: 350px;
+}
+
+.shadow-clock-container h2 {
+  margin: 0 0 10px 0;
+  color: #8b4513;
+  font-family: "Georgia", serif;
+}
+
+.current-time {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 15px 0;
+  font-family: monospace;
+}
+
+.shadow-clock-dial {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border-radius: 50%;
+  overflow: visible;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.clock-face {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.shadow-line {
+  filter: blur(1px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .shadow-clock-dial {
+    width: 250px;
+    height: 250px;
+  }
+
+  .shadow-clock-container {
+    padding: 15px;
+    max-width: 300px;
+  }
+}

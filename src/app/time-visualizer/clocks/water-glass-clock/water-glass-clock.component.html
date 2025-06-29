@@ -1,0 +1,33 @@
+<!-- src/app/water-glass-clock/water-glass-clock.component.html -->
+<div class="water-glass-clock-container">
+  <h2>{{ clockName }}</h2>
+
+  <div class="water-glasses-wrapper">
+    <!-- Seconds Glass -->
+    <div class="glass-column">
+      <div class="glass-label">Seconds</div>
+      <div class="glass-container">
+        <div class="water" [style.height.%]="secondFillPercentage"></div>
+      </div>
+      <div class="glass-value">{{ currentSeconds }}</div>
+    </div>
+
+    <!-- Minutes Glass -->
+    <div class="glass-column">
+      <div class="glass-label">Minutes</div>
+      <div class="glass-container">
+        <div class="water" [style.height.%]="minuteFillPercentage"></div>
+      </div>
+      <div class="glass-value">{{ currentMinutes }}</div>
+    </div>
+
+    <!-- Hours Glass -->
+    <div class="glass-column">
+      <div class="glass-label">Hours</div>
+      <div class="glass-container">
+        <div class="water" [style.height.%]="hourFillPercentage"></div>
+      </div>
+      <div class="glass-value">{{ currentHours }}</div>
+    </div>
+  </div>
+</div>
