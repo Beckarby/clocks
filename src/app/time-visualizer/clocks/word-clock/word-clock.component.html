@@ -1,0 +1,15 @@
+<div class="word-clock-container">
+  <h2>{{ clockName }}</h2>
+
+  <div class="word-grid">
+    <div class="row" *ngFor="let row of wordGrid; let r = index">
+      <span
+        class="letter"
+        [class.active]="letter.isActive"
+        *ngFor="let letter of row; let c = index"
+      >
+        {{ letter.char }}
+      </span>
+    </div>
+  </div>
+</div>

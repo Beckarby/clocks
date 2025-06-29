@@ -1,0 +1,41 @@
+.word-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #333; 
+}
+
+.word-grid {
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  font-family: 'Montserrat', sans-serif; 
+  text-transform: uppercase; 
+  user-select: none; 
+}
+
+.row {
+  display: flex;
+}
+
+.letter {
+  display: inline-block; 
+  width: 20px; 
+  height: 25px; 
+  text-align: center;
+  line-height: 25px;
+  font-size: 1.2em;
+  color: #666; 
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.letter.active {
+  color: #00ff00; 
+  text-shadow: 0 0 5px #00ff00, 0 0 10px rgba(0, 255, 0, 0.5); 
+}

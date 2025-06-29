@@ -1,7 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
 @font-face {
     font-family: '7digital';
-    src: url(/src/asssets/digital-7/digital-7.ttf) format('truetype');
+    src: url(/public/digital7/digital7.ttf) format('truetype');
 }
 
 body {

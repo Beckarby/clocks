@@ -12,6 +12,7 @@ import { CandleClockComponent } from './clocks/candle-clock/candle-clock.compone
 import { ShadowClockComponent } from "./clocks/shadow-clock/shadow-clock.component";
 import { TimeSliderComponent } from '../time-slider/time-slider.component';
 import { WaterGlassClockComponent } from './clocks/water-glass-clock/water-glass-clock.component';
+import { WordClockComponent } from './clocks/word-clock/word-clock.component';
 @Component({
   selector: 'app-time-visualizer',
   imports: [
@@ -25,6 +26,7 @@ import { WaterGlassClockComponent } from './clocks/water-glass-clock/water-glass
     ShadowClockComponent, 
     TimeSliderComponent,
     WaterGlassClockComponent,
+    WordClockComponent
 ],
   templateUrl: './time-visualizer.component.html',
   styleUrls: ['./time-visualizer.component.css']

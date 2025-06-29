@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'dsdigital';
-    src: url('/src/assets/dsdigital/DS-DIGI.TTF') format('truetype');
+    font-family: '7digital';
+    src: url('/public/digital7/digital7.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,7 +16,6 @@
 
 .navbar {
   width: 100%;
-  padding: 0 1rem;
 }
 
 .nav-container {
@@ -28,7 +27,6 @@
   height: 64px;
 }
 
-/* Brand/Logo */
 .nav-brand {
   flex-shrink: 0;
 }
@@ -46,13 +44,12 @@
 }
 
 .brand-text {
-  font-family: 'dsdigital', sans-serif;
+  font-family: '7digital', sans-serif;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   
   background-clip: text;
 }
 
-/* Navigation Menu */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -110,7 +107,6 @@
   color: white;
 }
 
-/* User Menu */
 .user-menu {
   display: flex;
   align-items: center;
@@ -146,7 +142,6 @@
   background-color: #dc2626;
 }
 
-/* Mobile Menu Toggle */
 .nav-toggle {
   display: none;
   flex-direction: column;
