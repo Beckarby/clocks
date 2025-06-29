@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClockSelectorComponent } from './clock-selector.component';
+import { BarClockComponent } from './bar-clock.component';
 
-describe('ClockSelectorComponent', () => {
-  let component: ClockSelectorComponent;
-  let fixture: ComponentFixture<ClockSelectorComponent>;
+describe('BarClockComponent', () => {
+  let component: BarClockComponent;
+  let fixture: ComponentFixture<BarClockComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClockSelectorComponent]
+      imports: [BarClockComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ClockSelectorComponent);
+    fixture = TestBed.createComponent(BarClockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

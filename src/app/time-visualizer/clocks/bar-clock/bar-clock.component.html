@@ -1,0 +1,31 @@
+<div class="bar-clock-container">
+  <h2>{{ clockName }}</h2>
+
+  <div class="bars-wrapper">
+    <!-- Hours Bar -->
+    <div class="bar-group">
+      <div class="bar-label">Hours</div>
+      <div class="bar-track">
+        <div class="bar-fill hour-fill" [style.width.%]="hourBarWidth"></div>
+      </div>
+    </div>
+
+    <!-- Minutes Bar -->
+    <div class="bar-group">
+      <div class="bar-label">Minutes</div>
+      <div class="bar-track">
+        <div class="bar-fill minute-fill" [style.width.%]="minuteBarWidth"></div>
+      </div>
+    </div>
+
+    <!-- Seconds Bar -->
+    <div class="bar-group">
+      <div class="bar-label">Seconds</div>
+      <div class="bar-track">
+        <div class="bar-fill second-fill" [style.width.%]="secondBarWidth"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="current-time-display">{{ currentTimeDisplay }}</div>
+</div>
